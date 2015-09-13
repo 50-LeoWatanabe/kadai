@@ -39,13 +39,14 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //var_dump($results);
 foreach($results as $row) {
 //	var_dump($row);
-	echo $row["create/date"] . "<br>";
+	echo $row["create_date"] . "<br>";
 	echo $row["news_title"] . "<br>";
 }
 $pdo = null;
 ?>
 
             <p class="view-detail text-right"><a href="news.php">ニュース一覧を見る</a></p>
+            <p class="view-detail text-right"><a href="admin/index.php">管理者画面</a></p>
         </article>
     </section>
    
