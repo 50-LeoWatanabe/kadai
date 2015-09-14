@@ -32,7 +32,7 @@ $pdo = new PDO("mysql:host=localhost;dbname=cs_academy;charset=utf8", "root", ""
 // $sql = "SELECT name, email FROM enq";
 // $sql = "SELECT * FROM enq where id = 1";
 // $sql = "SELECT * FROM enq LIMIT 3";
- $sql = "SELECT * FROM news ORDER BY update_date DESC LIMIT 5";
+ $sql = "SELECT * FROM enq ORDER BY update_date DESC LIMIT 5";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
