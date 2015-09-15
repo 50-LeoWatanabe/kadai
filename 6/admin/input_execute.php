@@ -11,7 +11,7 @@ $result = $stmt->execute();
 var_dump($result);
 if($result) {
 	echo "データが登録できました";
-	echo "<a href=index.php>一覧へ</a>";
+	echo "<a href=index.php>管理者メニューへ</a>";
 } else {
 	echo "データの登録に失敗しました";
 }

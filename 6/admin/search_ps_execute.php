@@ -18,7 +18,7 @@ foreach($results as $row) {
 //	var_dump($row);
 	$view .= "<tr>";
 	$view .= "<td><a href=update.php?news_id=" . $row["news_id"] . ">" . $row["news_id"] . "</a></td>";
-	$view .=  "<td><a href=update.php?news_title=" . $row["news_title"] . ">" . $row["news_title"] . "</a></td>";
+	$view .=  "<td><a href=update.php?news_id=" . $row["news_id"] . ">" . $row["news_title"] . "</a></td>";
 	$view .= "</tr>";
 }
 // table閉じタグで終了
