@@ -22,11 +22,18 @@ $pdo = null;
 </head>
 <body>
 <form action="update_execute.php" method="post">
-	ニュースタイトル: <input type="text" name="news_title" value="<?php echo $news_title ?>" />
-	ニュース内容: <input type="text" name="news_detail" value="<?php echo $news_detail ?>" />
-	記入者: <input type="text" name="author" value="<?php echo $author ?>" />
+    ニュースタイトル: <input type="text" name="news_title" value="<?php echo $news_title ?>" /><br>
+    ニュース内容: <input type="text" name="news_detail" value="<?php echo $news_detail ?>" /><br>
+    記入者: <input type="text" name="author" value="<?php echo $author ?>" /><br>
 	<input type="hidden" name="news_id" value="<?php echo $news_id ?>" />
-	<input type="submit" value="更新" />
+    <br>
+    <input type="radio" name="show_flg" value="1">記事の表示
+    <br>
+    <input type="radio" name="show_flg" value="2">非表示
+    <br>
+    <input type="hidden" name="news_id" value="<?php echo $news_id ?>" />
+    <br>
+    <input type="submit" value="更新" />
 </form>
 <form action="delete_execute.php" method="post">
 	<input type="hidden" name="news_id" value="<?php echo $news_id ?>" />

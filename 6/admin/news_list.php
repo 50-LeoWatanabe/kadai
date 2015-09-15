@@ -7,7 +7,7 @@ $pdo = new PDO("mysql:host=localhost;dbname=cs_academy;charset=utf8", "root", ""
 // $sql = "SELECT name, email FROM enq";
 // $sql = "SELECT * FROM enq where id = 1";
 // $sql = "SELECT * FROM enq LIMIT 3";
-$sql = "SELECT * FROM news ORDER BY update_date DESC LIMIT 5";
+$sql = "SELECT * FROM news ORDER BY update_date DESC LIMIT 15";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -32,6 +32,7 @@ foreach($results as $row) {
     echo "ニュースタイトル  ". $row["news_title"] . "<br>";
     echo "ニュース内容  ". $row["news_detail"] . "<br>";
     echo "記入者  ". $row["author"] . "<br>";
+    echo "記事の非表示(1は表示され、2は非表示)". $row["show_flg"] . "<br>";
     echo "この記事を更新する  ". "<td><a href=update.php?news_id=" . $row["news_id"] . ">" . $row["news_id"] . "</a></td>";
     echo "<br>";
     echo "<br>";

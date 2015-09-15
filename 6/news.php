@@ -36,7 +36,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //var_dump($results);
 foreach($results as $row) {
 //	var_dump($row);
-	echo $row["create/date"] . "　　";
+	echo $row["update_date"] . "　　";
 	echo $row["news_title"] . "　　";
 	echo $row["author"] . "<br>";
 	echo $row["news_detail"] . "<br>";
