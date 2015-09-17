@@ -1,6 +1,6 @@
 <?php 
 session_start(); 		// セッションを使うときは宣言
-var_dump($_SESSION) ;
+//var_dump($_SESSION) ;
 if (isset($_SESSION["status"])) { 
     if($_SESSION["status"] == "OK"){
     } else {
@@ -17,12 +17,12 @@ if (isset($_SESSION["status"])) {
 </head>
 <body>
 <br>
-<br>
 <hi>管理者メニュー</hi>
 <ul>
 <li><a href="input.php">ニュース新規追加</a></li>
     <li><a href="news_list.php">ニュース一覧（更新はここから）</a></li>
 <li><a href="search_ps.php">ニュース検索</a></li>
 </ul>
+    <p><a href="http://localhost/kadai/6/">メニューに戻る</a></p>
 </body>
 </html>

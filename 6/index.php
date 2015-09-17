@@ -27,13 +27,7 @@
                
                <?php
 $pdo = new PDO("mysql:host=localhost;dbname=cs_academy;charset=utf8", "root", "");
-//$sql = "SELECT * FROM news ORDER BY create/date DESC";
-// $sql = "SELECT name FROM enq";
-// $sql = "SELECT name, email FROM enq";
-// $sql = "SELECT * FROM enq where id = 1";
-// $sql = "SELECT * FROM enq LIMIT 3";
-$sql = "SELECT * FROM news WHERE show_flg = 1";
-$sql = "SELECT * FROM news ORDER BY update_date DESC LIMIT 5";
+$sql = "SELECT news_id, news_title, news_detail, DATE_FORMAT(update_date ,'%y-%m-%d') AS update_date FROM news WHERE show_flg = 1 ORDER BY update_date DESC LIMIT 5";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
