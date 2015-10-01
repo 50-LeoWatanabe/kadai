@@ -1,3 +1,15 @@
+<?php 
+session_start(); 		// セッションを使うときは宣言
+//var_dump($_SESSION) ;
+if (isset($_SESSION["status"])) { 
+    if($_SESSION["status"] == "OK"){
+    } else {
+        header("Location: login.php");
+    }
+} else { 
+    header("Location: login.php");
+}
+?>
 <html>
 <head>
 </head>
