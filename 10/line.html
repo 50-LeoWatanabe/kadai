@@ -34,7 +34,8 @@
         var last_message = "dummy";
 
         function renderMessage(message) {
-            var message_html = '<p class="post-text">' + escapeHTML(message.value.content) + '</p>';
+            console.log(message);
+            var message_html = '<p class="post-text">' + escapeHTML(message.value.name)  + '<br>'+(message.value.content)  + '</p>';
             var date_html = '';
             if(message.value.date) {
                 date_html = '<p class="post-date">'+escapeHTML( new Date(message.value.date).toLocaleString())+'</p>';
@@ -46,6 +47,7 @@
         function post() {
             //5."message"データストアにメッセージをプッシュする
             var content = escapeHTML($("#content").val());
+            var name = escapeHTML($("#name").val());
             if (content && content !== "") {
                 ds.push({
                     name: name,
@@ -83,7 +85,8 @@
         <div class="postarea cf">
 
             <div class="postarea-text">
-                <textarea name="" id="content" cols="30" rows="10" placeholder="最初に名前、次にメッセージを入れてください"></textarea>
+                <textarea name="" id="name" cols="30" rows="10" placeholder="投稿者"></textarea>
+                <textarea name="" id="content" cols="30" rows="10" placeholder="メッセージ"></textarea>
             </div>
 
             <div class="postarea-share cf">
