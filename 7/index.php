@@ -39,3 +39,24 @@ $pdo = null;
    
   
 <?php include("footer.php"); ?>
+
+
+<?php
+function myFunc($str){
+    $new = htmlspecialchars($str,ENT_COMPAT,'utf-8') ;
+        return $new;
+}
+        ?>
+        
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <?php
+            echo myFunc("<div>sss</div>");
+        ?>
+    </body>
+    </html>
